@@ -20,7 +20,7 @@ app.get('/api/getBins/:shelfId', getBins)
 app.post('/api/addEditBin/:shelfId/:binId', addEditBin)
 // Bin
 app.get('/api/getBin/:shelfId/:binId', getBin)
-app.delete('/api/deleteBin/:binId', deleteBin)
+app.delete('/api/deleteBin/:shelfId/:binId', deleteBin)
 
 
 app.listen(SERVER_PORT, () => console.log(`Let it do on port ${SERVER_PORT}`))

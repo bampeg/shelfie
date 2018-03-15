@@ -8,7 +8,6 @@ export default function Homepage() {
         <div>
             <Navbar/>
             <div className='shelves'>
-
                 <Link to='/shelf/A' >
                     <div className='shelf'>Shelf A</div>
                 </Link>
