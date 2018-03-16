@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../main.css'
 import Navbar from '../../components/Navbar/Navbar'
 
 export default function Homepage() {
