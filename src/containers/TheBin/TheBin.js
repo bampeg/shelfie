@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
+import './TheBin.css'
 
 export default class TheBin extends Component {
     constructor() {
@@ -48,25 +49,39 @@ export default class TheBin extends Component {
         return (
             <div>
                 <Navbar binID={binID} shelfID={shelfID} />
-                <img src="http://lorempixel.com/200/200/business/" alt="" />
-                <p>Name</p>
-                <input
-                    value={this.state.name}
-                    type="text"
-                    disabled={this.state.disabled}
-                    onChange={e => this.handleEdit(e.target.value, 'name')} />
-                <p>Price</p>
-                <input
-                    value={this.state.price}
-                    type="text"
-                    disabled={this.state.disabled}
-                    onChange={e => this.handleEdit(e.target.value, 'price')} />
-                {this.state.disabled ?
-                    <button onClick={() => this.setState({ disabled: false })}>Edit</button> :
-                    <button onClick={this.handleSave}>Save</button>}
-                <Link to={`/shelf/${shelfID}`}>
-                    <button onClick={this.handleDelete}>Delete</button>
-                </Link>
+
+                <div className="TheBin_container">
+
+                    <div className="TheBin_image_container">
+                        <img src="http://lorempixel.com/200/200/business/" alt="" />
+                    </div>
+
+                    <div className="TheBin_details_container">
+                        <p>Name</p>
+                        <input
+                            value={this.state.name}
+                            type="text"
+                            disabled={this.state.disabled}
+                            onChange={e => this.handleEdit(e.target.value, 'name')} />
+                        <p>Price</p>
+                        <input
+                            value={this.state.price}
+                            type="text"
+                            disabled={this.state.disabled}
+                            onChange={e => this.handleEdit(e.target.value, 'price')} />
+
+                        <div className="TheBin_button_container">
+                            {this.state.disabled ?
+                                <button className="gray_button left_button" onClick={() => this.setState({ disabled: false })}>Edit</button> :
+                                <button className="green_button left_button" onClick={this.handleSave}>Save</button>}
+                            <Link to={`/shelf/${shelfID}`}>
+                                <button className="gray_button right_button" onClick={this.handleDelete}>Delete</button>
+                            </Link>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         )
     }

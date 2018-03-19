@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
+import './AddToBin.css'
 
 export default class AddToBin extends Component {
     constructor() {
@@ -32,21 +33,26 @@ export default class AddToBin extends Component {
         let { shelfID, binID } = this.props.match.params
         return (
             <div>
-                <Navbar binID={binID} shelfID={shelfID} />
-
-                <p>Name</p>
-                <input
-                    value={this.state.name}
-                    type="text"
-                    onChange={e => this.handleEdit(e.target.value, 'name')} />
-                <p>Price</p>
-                <input
-                    value={this.state.price}
-                    type="text"
-                    onChange={e => this.handleEdit(e.target.value, 'price')} />
-                <Link to={`/shelf/${shelfID}`}>
-                    <button onClick={this.handleSave}>+ Add to Inventory</button>
-                </Link>
+                <Navbar binID={binID} shelfID={shelfID} add="add" />
+                <div className="AddToBin_container">
+                    <div className="AddToBin_details_container">
+                        <p>Name</p>
+                        <input
+                            value={this.state.name}
+                            type="text"
+                            onChange={e => this.handleEdit(e.target.value, 'name')} />
+                        <p>Price</p>
+                        <input
+                            value={this.state.price}
+                            type="text"
+                            onChange={e => this.handleEdit(e.target.value, 'price')} />
+                    </div>
+                    <div>
+                        <Link to={`/shelf/${shelfID}`}>
+                            <button className="AddToBin_green_button" onClick={this.handleSave}>+ Add to Inventory</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         )
     }

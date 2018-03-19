@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Navbar from '../../components/Navbar/Navbar'
+import './Shelf.css'
 
 export default class Shelves extends Component {
     constructor() {
@@ -18,35 +19,37 @@ export default class Shelves extends Component {
     }
 
     render() {
-        console.log(this.state.bins, "this.state.bins")
         let bins = null
         if (this.state.bins[0]) {
             bins = this.state.bins.map(elem => {
-
-                console.log(elem)
                 if (elem.name || elem.price) {
                     return (
-                        <Link key={elem.bin} to={`/bin/${elem.shelf}/${elem.bin}`}>
-                            <div name={elem.name}
-                                price={elem.price}
-                                className="shelf">
-                                Bin {elem.bin}
-                            </div>
-                        </Link>
+                        <div className="Shelf_shelf">
+                            <Link key={elem.bin} to={`/bin/${elem.shelf}/${elem.bin}`}>
+                                <div name={elem.name}
+                                    price={elem.price}
+                                    className="Shelf_shelf_title">
+                                    Bin {elem.bin}
+                                </div>
+                            </Link>
+                        </div>
                     )
                 }
                 return (
-                    <Link key={elem.bin} to={`/addto/${elem.shelf}/${elem.bin}`}>
-                        <div className="shelf" >+ Add Inventory</div>
-                    </Link>
+                    <div className="Shelf_shelf_add">
+                        <Link key={elem.bin} to={`/addto/${elem.shelf}/${elem.bin}`}>
+                            <div className="Shelf_shelf_add_title" >+ Add Inventory</div>
+                        </Link>
+                    </div>
                 )
             })
         }
         return (
             <div>
                 <Navbar shelfID={this.props.match.params.shelfID} />
-
-                {bins}
+                <div className="Shelf_container">
+                    {bins}
+                </div>
             </div>
         )
     }

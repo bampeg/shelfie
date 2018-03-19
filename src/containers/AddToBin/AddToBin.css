@@ -1,0 +1,43 @@
+.AddToBin_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.AddToBin_details_container>p {
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.AddToBin_details_container>input {
+    border: solid 1px #ed6b5a;
+    border-radius: 3px;
+    padding: 10px;
+    min-width: 500px;
+    width: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+    background: white;
+    color: black;
+    font-weight: 700;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.275);
+}
+
+.AddToBin_green_button {
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    min-width: 522px;
+    width: auto;
+    border-radius: 3px;
+    background-color: #40f99b;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.275);
+}

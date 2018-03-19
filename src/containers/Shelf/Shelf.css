@@ -1,0 +1,44 @@
+.Shelf_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.Shelf_shelf {
+    display: flex;
+    background: #ed6b5a;
+    width: 500px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.275);
+}
+
+.Shelf_shelf_title {
+    position: relative;
+    right: 85px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.Shelf_shelf_add {
+    display: flex;
+    background: #ffb8af;
+    width: 500px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.275);
+}
+
+.Shelf_shelf_add_title {
+    /* color: black; */
+    font-weight: 700;
+    font-size: 30px;
+}

@@ -1,0 +1,73 @@
+.TheBin_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.TheBin_image_container {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.TheBin_details_container>p {
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.TheBin_details_container>input {
+    display: flex;
+    border: solid 1px #ed6b5a;
+    border-radius: 3px;
+    padding: 10px;
+    min-width: 500px;
+    width: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+    background: white;
+    color: black;
+    font-weight: 700;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.275);
+}
+
+.TheBin_button_container {
+    min-width: 500px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.right_button {
+    float: right;
+    margin-right: 0px;
+}
+
+.gray_button {
+    font-weight: 700;
+    font-size: 30px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 3px;
+    background-color: #d8d8d8;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.275);
+    outline: none;
+}
+
+.green_button {
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 3px;
+    background-color: #40f99b;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #cccccc;
+    outline: none;
+}
