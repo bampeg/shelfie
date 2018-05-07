@@ -20,7 +20,7 @@ export default class Shelves extends Component {
 
     render() {
         let bins = null
-        if (this.state.bins[0]) {
+        if (this.state.bins.length > 0) {
             bins = this.state.bins.map(elem => {
                 if (elem.name || elem.price) {
                     return (
